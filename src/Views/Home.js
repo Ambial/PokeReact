@@ -8,8 +8,8 @@ export default function Home({ pokemon: results }) {
             {
                 results &&
                 results.map((pokemon, idx) => (
-                    <div className="ml-4 text-2xl text-blue-400">
-                        <Link to={`/about/${pokemon.idx}`} key={idx}>{pokemon.name}</Link>
+                    <div className="ml-4 text-2xl text-blue-400" key={idx}>
+                        <Link to={`/about/${pokemon.idx}`}>{pokemon.name}</Link>
                     </div>
                 ))
             }

@@ -5,14 +5,12 @@ export default function About(props) {
 
     const { slug } = useParams();
     const [pokemon, setPokemon] = useState();
-    console.log(props);
+
     useEffect(() => {
         fetch(`https://pokeapi.co/api/v2/pokemon/${slug}/`)
             .then((res) => res.json())
             .then((data) => {
                 setPokemon(data);
-
-                console.log(data);
             });
     }, [slug]);
 
